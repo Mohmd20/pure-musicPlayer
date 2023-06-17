@@ -1,6 +1,6 @@
  /* css reset */
  :root {
-  --white-color: #decdcd;
+  --white-color: rgb(239, 238, 238);
   --black-color: #212121;
   --primary-color: rgb(29, 29, 87) ;
   --gray-1:#333;
@@ -17,8 +17,86 @@
  ul {
      list-style: none;
  }
- 
- a {
+ @media only screen and (max-width: 500px){
+   body{
+    overflow-x: hidden;
+   }
+   .home-header{
+    padding: 5px !important;
+   }
+   .main-menu-gap{
+    gap: 3px !important;
+    padding-left: 5px !important;
+    padding-right: 5px;
+   }
+   .btn2{
+    
+    height: 30px;
+    width: 30px;
+    padding: 2em;
+    position: relative;
+    vertical-align: middle;
+   }
+   .sign{
+    padding: 5px;
+    font-size: 1em;
+    width: 100%;
+    font-weight: 1px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  /*
+    move the (positioned) element up and left 
+    by half its own width/height
+  */
+  transform: translate(-50%, -50%);
+  }
+   #listmusic{
+    
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+   }
+   .music-card{
+    width: 60% !important;
+    overflow: scroll;
+   }
+   .bg_signup{
+    background-size: 100vw 100vh !important;
+   }
+   
+   #play-icon{
+    position: absolute;
+  top: 50%;
+  left: 50%;
+  /*
+    move the (positioned) element up and left 
+    by half its own width/height
+  */
+  transform: translate(-50%, -50%);
+   }
+   .cover-play-button{
+    width: 2em;
+    height: 4em;
+    position: relative;
+    vertical-align: middle;
+   }
+   .text-i{
+    font-size: 1em;
+    width: 100%;
+    font-weight: 1px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  /*
+    move the (positioned) element up and left 
+    by half its own width/height
+  */
+  transform: translate(-50%, -50%);
+   }
+ }
+ a:not(.forget) {
      color: var(--white-color);
      text-decoration: none;
      transition: 0.5s;
@@ -27,7 +105,7 @@
  a.forget{
   font-size: 18px;
  }
- a:hover {
+ a:not(.forget):hover {
      color: #3d066e;
      
  }
@@ -97,22 +175,28 @@
      justify-content: space-around;
  }
  /* css componnent */
- /* elementi ke chanja estefade mishe b component tabdil mikonim */
+
  
  .btn2 {
-  background: linear-gradient(to right, rgb(30, 21, 17) 35%, rgba(213,206,163,1) 61%, rgba(229,229,203,1) 100%);  
-    background-size: 200% 100%;
-    background-position: right bottom;
-    transition: all 1s ease-in-out;
+  
     border-radius: 8px;
-     /* doresh gerd mishe */
      padding: 15px 40px;
      font-size: 18px;
      cursor: pointer;
-     /* sehkl dast miseh mouse */
+     
  }
- 
- .btn2:hover {
+ .back_effect_play{
+  
+  background-size: 100% 100%;
+    background-color: var(--black-color) !important;
+ }
+ .back_effect_sign{
+  background: linear-gradient(to right, rgb(30, 21, 17) 35%, rgba(213,206,163,1) 61%, rgba(229,229,203,1) 100%);  
+    background-size: 200% 100%;
+    background-position: right bottom;
+    transition: all 1s ease-in-out !important;
+ }
+ .back_effect_sign:hover {
     
   background-position: left bottom;
   
@@ -152,11 +236,7 @@
      list-style: none;
  }
  
- @media (max-width:1400px) {
-     .salahshoor {
-         display: none;
-     }
- }
+ 
  .musiccart{
     width: 60px;
     height:100px ;
@@ -516,7 +596,7 @@
     width: 20.2rem;
     height: 20.2rem;
     border-radius: 12%;
-    background-color: red;
+    background-color: rgb(126, 126, 126);
     box-shadow: 0px -1px 6px rgba(255, 85, 0, 0.1);
     background-repeat: no-repeat;
     margin-left: 100px;
@@ -700,7 +780,12 @@
   .forget{
     cursor: pointer;
     margin-left: 1%;
-  }
+    color: white;
+    transition: 0.5s ease-in-out;
+    }
+    .forget:hover{
+      color: black;
+    }
   .spn{
     color: red;
     
@@ -735,10 +820,14 @@
   }
   .footer{
     margin-top: 5rem;
-    color: var(--white-color);
+    color: black;
     flex-direction: column;
     align-items: center;
     gap: 1rem;
+    transition: 0.5s ease-in-out;
+  }
+  .footer:hover{
+    color: var(--white-color) !important;
   }
   .social-icons{
     flex-direction: row;
@@ -750,9 +839,7 @@
     width: 35px;
     height: 35px;
   }
-  .warning{
-    color: red;
-  }
+  
 
 
 

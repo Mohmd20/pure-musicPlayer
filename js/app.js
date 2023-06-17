@@ -180,7 +180,8 @@ function setCurrentMusic (){
           
           playb=false
       }
-  else{ coverPlayButton.innerText="PAUSE"
+  else{ coverPlayButton.innerText="<span class='text-i'>PAUSE</span>"
+   coverPlayButton.classList.add("text-i")
    playButton.innerHTML=`<i class="material-icons" style="font-size:36px">pause</i> `
   playb=true
   audio.play()

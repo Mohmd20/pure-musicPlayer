@@ -18,7 +18,7 @@ export  const  musics =[
         details: "detals of musice folan ",
         name: "koli",
         artist: "Homayoun Shajarian",
-        cover: "http://ahangbaz.in/wp-content/uploads/cover/38357467.jpg",
+        cover: "https://i1.sndcdn.com/artworks-000362513337-sc902d-t500x500.jpg",
         ccolor: ["#844C6B", "37407E"],
         active: false,
         audio:
