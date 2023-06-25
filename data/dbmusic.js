@@ -28,7 +28,7 @@ export  const  musics =[
         id: 5,
         details: "detals of musice folan ",
         name: "khod khah",
-        artist: "Mohsen Yegane",
+        artist: `Mohsen Yegane`,
         cover:
           "http://sakhamusic.ir/wp-content/uploads/2020/03/%D8%AF%D8%A7%D9%86%D9%84%D9%88%D8%AF-%D8%A2%D9%87%D9%86%DA%AF-%D9%85%D8%AD%D8%B3%D9%86-%DB%8C%DA%AF%D8%A7%D9%86%D9%87-%D8%AE%D9%88%D8%AF%D8%AE%D9%88%D8%A7%D9%87.jpg",
         ccolor: ["#844C6B", "37407E"],

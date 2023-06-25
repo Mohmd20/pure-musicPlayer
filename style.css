@@ -62,7 +62,7 @@
     width: 60% !important;
     overflow: scroll;
    }
-   .bg_signup{
+   .bg-signup{
     background-size: 100vw 100vh !important;
    }
    
@@ -106,7 +106,7 @@
   font-size: 18px;
  }
  a:not(.forget):hover {
-     color: #3d066e;
+     color: #610094;
      
  }
  
@@ -127,7 +127,7 @@
      max-width: 1360px;
      margin-right: auto;
      margin-left: auto;
-     background: url(./images/pexels-cottonbro-studio-9665194.jpg);
+     background: black;
  }
  
  .d-flex {
@@ -156,8 +156,9 @@
   
 }
  .bordertop{
-    border-top: 1rem solid #f50;
+    border-top: 1rem solid #610094;
     position: relative;
+    border-radius: 1em;
     /* left: 150px; */
     display: flex;
     margin-bottom: 1rem;
@@ -191,13 +192,13 @@
     background-color: var(--black-color) !important;
  }
  .back_effect_sign{
-  background: linear-gradient(to right, rgb(30, 21, 17) 35%, rgba(213,206,163,1) 61%, rgba(229,229,203,1) 100%);  
+  background: linear-gradient(to right, rgb(0, 0, 0) 35%, rgba(213,206,163,1) 61%, rgba(229,229,203,1) 100%);  
     background-size: 200% 100%;
     background-position: right bottom;
     transition: all 1s ease-in-out !important;
  }
  .back_effect_sign:hover {
-    
+  box-shadow: 1px 1px 2px 3px white;
   background-position: left bottom;
   
 }
@@ -241,7 +242,7 @@
     width: 60px;
     height:100px ;
     border-radius: 10px;
-    border: #ff5500;
+    border: #610094;
  }
 
 
@@ -291,6 +292,7 @@
     color: var(--white-color);
   }
   .link-btn {
+    color: #ebebeb;
     background-color: transparent;
     border: none;
     outline: none;
@@ -310,8 +312,9 @@
     content: " ";
     display: block;
     height: 0.8rem;
-    background: #ff5500;
+    background: #610094;
     border-radius: 0.45rem;
+    
     width: 65%;
     transform: translateY(0.9rem);
   }
@@ -319,16 +322,18 @@
   .music-card {
     display: flex;
     flex-direction: column;
-    background-color: gold;
+    background-color: #ebebeb;
     width: 30%;
   
     display: flex;
     flex-direction: column;
     border-radius: 1.6rem;
     overflow: hidden;
-    box-shadow: 0px -1px 6px rgba(255, 85, 0, 0.1);
+    /* box-shadow: 0px -1px 6px rgba(255, 85, 0, 0.1); */
   }
-  
+  .text-i{
+    color: #ebebeb !important;
+  }
   .music-cover {
     height: 27.6rem;
     object-fit: cover;
@@ -354,19 +359,21 @@
   }
   
   .singer-name {
+    font-size: large;
     color: #333;
-    font-weight: 500;
+    font-weight: 700;
   }
   
   .music-name-text {
+    font-size: larger;
     color: #4f4f4f;
-    font-weight: 400;
+    font-weight: 600;
   }
   
   .play-icon {
     width: 7rem;
     height: 7rem;
-    background-color: #ff5500;
+    background-color: #610094;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -607,6 +614,7 @@
   }
   
   .music-details-container {
+    display: none;
     gap: 6rem;
     align-items: center;
   }
@@ -717,13 +725,13 @@
     width: 40%;
   }
   
-  .bg_signup{
-    background-image: url(./images/4531328.jpg);
+  .bg-signup{
+    background: rgba(11, 11, 11, 0.946);
     background-repeat: no-repeat;
     background-size: cover;
     overflow: hidden;
   }
-  .s_container{
+  .s-container{
     z-index: 1;
     transform: translate(-50%, -50%);
     width: 350px;
@@ -731,7 +739,7 @@
     background-color: white;
     top: 50%;
     left: 50%;
-    opacity: 0.3;
+    opacity: 0.5;
     border-radius: 5px;
     position: fixed;
   }
@@ -839,7 +847,9 @@
     width: 35px;
     height: 35px;
   }
-  
+  .svgh{
+    color: #FFFFFF;
+  }
 
 
 

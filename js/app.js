@@ -10,6 +10,7 @@ const playIcon = document.querySelector("#play-icon")
 const coverPlayButton =document.querySelector(".cover-play-button")
 coverPlayButton.style.display="inline"
 const currentTime = document.querySelector(".current-time")
+const musicDetail = document.querySelector(".music-details-container")
 const fullTime = document.querySelector(".full-time")
 const musicTimeRange =document.querySelector("#music-time-range")
 const musicProgressBar = document.querySelector(".music-progress-bar")
@@ -45,7 +46,7 @@ musics.forEach((song) => {
             width="27"
             height="27"
             viewBox="0 0 27 27"
-            fill="none"
+            fill="#FFFFFF"
             xmlns="http://www.w3.org/2000/svg"
           >
             <path
@@ -102,7 +103,7 @@ function setCurrentMusic (){
   element.addEventListener("click",()=> {
     //indexCurrentOfMusic=music.findIndex((item) =>item.id === Number(element.dataset.id))
 
-
+    musicDetail.style.display = "flex"
     let currentMusic =musics.filter((item)=>
     item.id === Number(element.dataset.id))[0]
    
@@ -151,25 +152,24 @@ function setCurrentMusic (){
      playButton.addEventListener("click",(e)=>{
       if(playb){
         playButton.innerHTML=`<svg
-        width="34"
-        height="39"
-        viewBox="0 0 34 39"
+        id="play-icon"
+        width="70"
+        height="70"
+        viewBox="0 0 183 170"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
-        >
+      >
         <path
-        fill-rule="evenodd"
-        clip-rule="evenodd"
-        d="M0.0585965 3.75484C0.0585965 1.42731 3.16006 0.0776807 5.38466 0.9872C7.93308 2.65922 29.6043 14.8642 31.5644 16.4936C33.5245 18.123 34.0866 20.71 31.4312 22.6341C28.776 24.558 7.67168 36.9793 5.38466 38.058C3.09716 39.1365 0.153909 37.6692 0.0585965 34.9394C-0.036716 32.2097 0.0585965 6.08213 0.0585965 3.75484ZM3.26038 5.77546C3.26038 6.36974 3.24227 32.666 3.20891 33.2069C3.15411 34.094 3.92376 34.9854 4.99602 34.4567C6.06829 33.9277 28.2337 20.7069 29.1139 20.3645C29.9943 20.0218 29.936 19.1492 29.1139 18.604C28.2921 18.0589 5.72254 5.14592 5.0625 4.57881C4.40246 4.01147 3.26038 4.86308 3.26038 5.7757V5.77546Z"
-          fill="#4F4F4F"
-          />
-          </svg>`
+          d="M132.684 92.3876L60.0932 131.188C53.9327 134.478 46.0269 130.495 46.0269 123.863V46.262C46.0269 39.641 53.9213 35.6475 60.0932 38.9474L132.684 77.748C134.085 78.485 135.25 79.5503 136.06 80.8358C136.87 82.1213 137.297 83.5813 137.297 85.0678C137.297 86.5543 136.87 88.0144 136.06 89.2999C135.25 90.5854 134.085 91.6506 132.684 92.3876Z"
+          fill="#F2F2F2"
+        />
+      </svg>`
           audio.pause()
           coverPlayButton.innerHTML=`<svg
-          width="27"
-          height="27"
+          width="20px"
+          height="30px"
           viewBox="0 0 27 27"
-          fill="none"
+          fill="#FFFFFF"
           xmlns="http://www.w3.org/2000/svg"
           >
           <path
@@ -180,9 +180,25 @@ function setCurrentMusic (){
           
           playb=false
       }
-  else{ coverPlayButton.innerText="<span class='text-i'>PAUSE</span>"
-   coverPlayButton.classList.add("text-i")
-   playButton.innerHTML=`<i class="material-icons" style="font-size:36px">pause</i> `
+  else{ coverPlayButton.innerHTML=`<svg  class="text-i" version="1.0" xmlns="http://www.w3.org/2000/svg"
+  width="40px" height="40px" viewBox="0 0 50.000000 50.000000"
+  preserveAspectRatio="xMidYMid meet">
+ <g transform="translate(0.000000,50.000000) scale(0.100000,-0.100000)"
+ fill="#FFFFFF" stroke="none">
+ <path d="M120 250 l0 -170 50 0 50 0 0 170 0 170 -50 0 -50 0 0 -170z"/>
+ <path d="M280 250 l0 -170 50 0 50 0 0 170 0 170 -50 0 -50 0 0 -170z"/>
+ </g>
+ </svg>`
+   //coverPlayButton.classList.add("text-i")
+   playButton.innerHTML=`<svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+   width="50px" height="50px" viewBox="0 0 50.000000 50.000000"
+   preserveAspectRatio="xMidYMid meet">
+  <g transform="translate(0.000000,50.000000) scale(0.100000,-0.100000)"
+  fill="#FFFFFF" stroke="none">
+  <path d="M120 250 l0 -170 50 0 50 0 0 170 0 170 -50 0 -50 0 0 -170z"/>
+  <path d="M280 250 l0 -170 50 0 50 0 0 170 0 170 -50 0 -50 0 0 -170z"/>
+  </g>
+  </svg> `
   playb=true
   audio.play()
 
@@ -202,8 +218,24 @@ function setCurrentMusic (){
             musicTimeRange.max=audio.duration
            
            
-            coverPlayButton.innerText="PAUSE"
-            playButton.innerHTML=`<i class="material-icons" style="font-size:36px">pause</i>`
+            coverPlayButton.innerHTML=`<svg  class="text-i" version="1.0" xmlns="http://www.w3.org/2000/svg"
+            width="40px" height="40px" viewBox="0 0 50.000000 50.000000"
+            preserveAspectRatio="xMidYMid meet">
+           <g transform="translate(0.000000,50.000000) scale(0.100000,-0.100000)"
+           fill="#FFFFFF" stroke="none">
+           <path d="M120 250 l0 -170 50 0 50 0 0 170 0 170 -50 0 -50 0 0 -170z"/>
+           <path d="M280 250 l0 -170 50 0 50 0 0 170 0 170 -50 0 -50 0 0 -170z"/>
+           </g>
+           </svg>`
+            playButton.innerHTML=`<svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+            width="50px" height="50px" viewBox="0 0 50.000000 50.000000"
+            preserveAspectRatio="xMidYMid meet">
+           <g transform="translate(0.000000,50.000000) scale(0.100000,-0.100000)"
+           fill="#FFFFFF" stroke="none">
+           <path d="M120 250 l0 -170 50 0 50 0 0 170 0 170 -50 0 -50 0 0 -170z"/>
+           <path d="M280 250 l0 -170 50 0 50 0 0 170 0 170 -50 0 -50 0 0 -170z"/>
+           </g>
+           </svg>`
             
             playb=false
             
@@ -212,25 +244,24 @@ function setCurrentMusic (){
                 coverPlayButton.style.display="inline-block"
              
               playButton.innerHTML=`<svg
-              width="34"
-              height="39"
-              viewBox="0 0 34 39"
+              id="play-icon"
+              width="70"
+              height="70"
+              viewBox="0 0 183 170"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
-              >
+            >
               <path
-              fill-rule="evenodd"
-              clip-rule="evenodd"
-              d="M0.0585965 3.75484C0.0585965 1.42731 3.16006 0.0776807 5.38466 0.9872C7.93308 2.65922 29.6043 14.8642 31.5644 16.4936C33.5245 18.123 34.0866 20.71 31.4312 22.6341C28.776 24.558 7.67168 36.9793 5.38466 38.058C3.09716 39.1365 0.153909 37.6692 0.0585965 34.9394C-0.036716 32.2097 0.0585965 6.08213 0.0585965 3.75484ZM3.26038 5.77546C3.26038 6.36974 3.24227 32.666 3.20891 33.2069C3.15411 34.094 3.92376 34.9854 4.99602 34.4567C6.06829 33.9277 28.2337 20.7069 29.1139 20.3645C29.9943 20.0218 29.936 19.1492 29.1139 18.604C28.2921 18.0589 5.72254 5.14592 5.0625 4.57881C4.40246 4.01147 3.26038 4.86308 3.26038 5.7757V5.77546Z"
-                fill="#4F4F4F"
-                />
-                </svg>`
+                d="M132.684 92.3876L60.0932 131.188C53.9327 134.478 46.0269 130.495 46.0269 123.863V46.262C46.0269 39.641 53.9213 35.6475 60.0932 38.9474L132.684 77.748C134.085 78.485 135.25 79.5503 136.06 80.8358C136.87 82.1213 137.297 83.5813 137.297 85.0678C137.297 86.5543 136.87 88.0144 136.06 89.2999C135.25 90.5854 134.085 91.6506 132.684 92.3876Z"
+                fill="#F2F2F2"
+              />
+            </svg>`
             playb=false
                 coverPlayButton.innerHTML=`<svg
-                width="27"
-                height="27"
+                width="20px"
+                height="30px"
                 viewBox="0 0 27 27"
-                fill="none"
+                fill="#FFFFFF"
                 xmlns="http://www.w3.org/2000/svg"
               >
                 <path
@@ -242,8 +273,24 @@ function setCurrentMusic (){
               else {
                 audio.play();
                 coverPlayButton.style.display="inline"
-                coverPlayButton.innerText="PAUSE"
-                playButton.innerHTML=`<i class="material-icons" style="font-size:36px">pause</i>`
+                coverPlayButton.innerHTML=`<svg  class="text-i" version="1.0" xmlns="http://www.w3.org/2000/svg"
+                width="40px" height="40px" viewBox="0 0 50.000000 50.000000"
+                preserveAspectRatio="xMidYMid meet">
+               <g transform="translate(0.000000,50.000000) scale(0.100000,-0.100000)"
+               fill="#FFFFFF" stroke="none">
+               <path d="M120 250 l0 -170 50 0 50 0 0 170 0 170 -50 0 -50 0 0 -170z"/>
+               <path d="M280 250 l0 -170 50 0 50 0 0 170 0 170 -50 0 -50 0 0 -170z"/>
+               </g>
+               </svg>`
+                playButton.innerHTML=`<svg version="1.0" xmlns="http://www.w3.org/2000/svg"
+                width="50px" height="50px" viewBox="0 0 50.000000 50.000000"
+                preserveAspectRatio="xMidYMid meet">
+               <g transform="translate(0.000000,50.000000) scale(0.100000,-0.100000)"
+               fill="#FFFFFF" stroke="none">
+               <path d="M120 250 l0 -170 50 0 50 0 0 170 0 170 -50 0 -50 0 0 -170z"/>
+               <path d="M280 250 l0 -170 50 0 50 0 0 170 0 170 -50 0 -50 0 0 -170z"/>
+               </g>
+               </svg>`
                 playb=true
       
               }
